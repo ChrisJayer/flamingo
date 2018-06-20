@@ -1,0 +1,86 @@
+server:
+  port: 8089
+
+
+spring:
+  aop:
+    auto: true
+  jackson:
+    dateFormat: yyyy-MM-dd HH:mm:ss
+#    serialization:
+    indent_output: true
+    time-zone: GMT+8
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/borwx?useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: caojing
+#    driver-class-name: com.mysql.jdbc.Driver
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  thymeleaf:
+    encoding: utf-8
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
+
+wechat:
+#  auth:
+#    state: _state
+#    defaultScope: snsapi_userinfo
+#  pay:
+#    appId:
+#    mchId:
+#    mchKey:
+#    subAppId:
+#    subMchId:
+#    keyPath:
+#    notifyURL: #${weipay.server.prefix}/wechat/pay/notified
+#    tradeType: JSAPI
+# 订阅号：霓虹大丈夫
+#  mp:
+#    appid: wxa8e73529b7b31f5b
+#    secret: d0ac2a81e3548e99457d9b9f3f7f7724
+#    token: cj_token
+#    aesKey:
+# 测试号：
+  mp:
+    appid: wxae88840132229c00
+    secret: d74a8e5664697a975a0891c2c2611a3f
+    token: cj_token
+    aesKey:
+    # 测试号：qinglong
+#  mp:
+#    appid: wx904daffa83c925a9
+#    secret: 4feb01e89390d616113700a605f39e8a
+#    token: cj_token
+#    aesKey:
+
+infra: #infrastructure
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/borwx?useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: caojing
+#    testOnBorrow: true
+#    testWhileIdle: true
+#    validationQuery: select 1
+#    maxActive: 30
+#    minIdle: 5
+#    initialSize: 5
+#    maxWait: 60000
+  redis:
+    host: localhost
+    port: 6379
+    password: redis
+    defaultdb: 9
+    timeout: 550
+    maxTotal: 300
+    maxIdle: 100
+    maxWait: 1000
